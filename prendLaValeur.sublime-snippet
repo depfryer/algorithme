@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-$1 PREND_LA_VALEUR $2
+$1 PREND_LA_VALEUR [${2:comment;}:${3:nom de l'objet}(${4:numeroport)]
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->  
 	  <tabTrigger>prend_la_valeur</tabTrigger>

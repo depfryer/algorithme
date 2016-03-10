@@ -1,6 +1,6 @@
 # [PackageDev] target_format: plist, ext: tmLanguage
 ---
-name: Algorithme_test
+name: Algorithme_vers_V2
 scopeName: source.algo
 fileTypes: [algo]
 uuid: 2d401605-595f-4f69-9330-3506163e7a52
@@ -8,7 +8,7 @@ patterns:
 
 ## Programme
 - match: \b(PROGRAMME|VAR|CONST|FIN|DEBUT|SOUS-PROGRAMME|E/S|PROCEDURE|E|S|FONCTION|RETOURNER)\b
-  name: constant.numeric.algo
+  name: variable.parameter
 
 ## Conditionnelle
 - match: \b(SI|FINSI|ALORS|SINON|CAS|PARMI|PAR DEFAUT|FINCASPARMI|PAUSE)\b
@@ -54,5 +54,15 @@ patterns:
   match: \$([A-Za-z][A-Za-z0-9_]+)
   captures:
     '1': {name: constant.numeric.ssraw}
+
+      
+## Parametre
+- comment: Variables like [PARAM:FDHG()]
+  name: keyword.control.algo 
+  match: \[([A-Za-z][A-Za-z0-9_]+)\:([A-Za-z][A-Za-z0-9_]+)\(([A-Za-z][A-Za-z0-9_]+)\)\]
+  captures:
+    '1': {name: storage.type.algo}
+    '2': {name: string.algo }
+    '3': {name: variable.parameter}
 
 

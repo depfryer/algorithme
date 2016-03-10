@@ -7,14 +7,14 @@
 		<string>algo</string>
 	</array>
 	<key>name</key>
-	<string>Algorithme_test</string>
+	<string>Algorithme_vers_V2</string>
 	<key>patterns</key>
 	<array>
 		<dict>
 			<key>match</key>
 			<string>\b(PROGRAMME|VAR|CONST|FIN|DEBUT|SOUS-PROGRAMME|E/S|PROCEDURE|E|S|FONCTION|RETOURNER)\b</string>
 			<key>name</key>
-			<string>constant.numeric.algo</string>
+			<string>variable.parameter</string>
 		</dict>
 		<dict>
 			<key>match</key>
@@ -105,6 +105,32 @@
 			<string>\$([A-Za-z][A-Za-z0-9_]+)</string>
 			<key>name</key>
 			<string>storage.type.algo</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.algo</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>string.algo</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>variable.parameter</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Variables like [PARAM:FDHG()]</string>
+			<key>match</key>
+			<string>\[([A-Za-z][A-Za-z0-9_]+)\:([A-Za-z][A-Za-z0-9_]+)\(([A-Za-z][A-Za-z0-9_]+)\)\]</string>
+			<key>name</key>
+			<string>keyword.control.algo</string>
 		</dict>
 	</array>
 	<key>scopeName</key>
