@@ -1,6 +1,6 @@
 # [PackageDev] target_format: plist, ext: tmLanguage
 ---
-name: Algorithme_test
+name: Algorithme
 scopeName: source.algo
 fileTypes: [algo]
 uuid: 2d401605-595f-4f69-9330-3506163e7a52
