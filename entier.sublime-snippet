@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[
+${2:Variable} est un ENTIER ]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>entier</tabTrigger>
+    <!-- Optional: Scope the tab trigger will be active in -->
+    <scope>source.algo</scope>
+</snippet>
+

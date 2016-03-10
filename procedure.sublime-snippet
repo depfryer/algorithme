@@ -1,0 +1,14 @@
+<snippet>
+    <content><![CDATA[
+SOUS_PROGRAMME ${1:nom} () //${2: Que fait ce sous programme}
+VAR
+	$2
+DEBUT
+	$3
+FIN
+]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>sous-programme</tabTrigger>
+    <!-- Optional: Scope the tab trigger will be active in -->
+    <scope>source.algo</scope>
+</snippet>

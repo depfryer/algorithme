@@ -1,0 +1,58 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: Algorithme_test
+scopeName: source.algo
+fileTypes: [algo]
+uuid: 2d401605-595f-4f69-9330-3506163e7a52
+patterns:
+
+## Programme
+- match: \b(PROGRAMME|VAR|CONST|FIN|DEBUT|SOUS-PROGRAMME|E/S|PROCEDURE|E|S|FONCTION|RETOURNER)\b
+  name: constant.numeric.algo
+
+## Conditionnelle
+- match: \b(SI|FINSI|ALORS|SINON|CAS|PARMI|PAR DEFAUT|FINCASPARMI|PAUSE)\b
+  name: keyword.control.algo
+
+## switch 2
+- match: (CAS)[0-9]{1,8}
+  name: keyword.control.algo
+
+## Iterative
+- match: \b(POUR|ALLANT DE|A|AU PAS DE|FAIRE|FINPOUR|TANT QUE|FINTANTQUE|REPETER|JUSQU'A|PREND_LA_VALEUR|AFFICHE)\b
+  name: entity.name.function.algo 
+
+## Variable
+- match: \b(ENTIER|REEL|BOOLEEN|CARACTERE|CHAINE)\b
+  name: storage.type.algo
+
+## Structure
+- match: \b(STRUCTURE|DEBUTSTRUCTURE|FINSTRUCTURE)\b
+  name: support.function.algo
+
+## Commentaires
+- match: '(?<=\s|\w|)[\/]{2,}.*'
+  name: comment.algo
+
+## Tableau
+- begin: '(TABLEAU \[)(.*?)(\])'
+  beginCaptures:
+   '1': {name: storage.type.algo}
+   '3': {name: storage.type.algo}
+  end: ' '
+
+## Tableau n Dim
+- begin: \b'( \[)(.*?)(\])'\b
+  beginCaptures:
+   '1': {name: storage.type.algo}
+   '3': {name: storage.type.algo}
+  end: ' '
+
+## variable
+- comment: Variables like $VAR
+  name: storage.type.algo
+  match: \$([A-Za-z][A-Za-z0-9_]+)
+  captures:
+    '1': {name: constant.numeric.ssraw}
+
+

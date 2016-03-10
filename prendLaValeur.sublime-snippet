@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+$1 PREND_LA_VALEUR $2
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->  
+	  <tabTrigger>prend_la_valeur</tabTrigger>
+	<!-- <scope>source.python</scope> -->
+    <scope>source.algo</scope>
+
+</snippet>
